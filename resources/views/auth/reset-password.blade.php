@@ -1,39 +1,40 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('password.store') }}">
-        @csrf
-
-        <!-- Password Reset Token -->
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+@extends('layouts.auth.app')
+@section('content')
+    <div class="card-body">
+        <div class="mb-5">
+            <h2 class="fw-bolder fs-7 mb-3">Lupa Kata Sandi Kamu?</h2>
+            <p class="mb-0 ">
+                tolong masukkan email kamu, kami akan mengirimkan link untuk mereset kata sandi kamu.
+            </p>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Reset Password') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+        <form method="POST" action="{{ route('password.update') }}">
+            @csrf
+            <input type="hidden" name="token" value="{{ $request->route('token') }}">
+            <div class="mb-3">
+                <label for="email_field" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" value="{{ request('email') }}" readonly >
+                @error('email')
+                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="password_field" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password_field" required autofocus />
+                @error('password')
+                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="password_confirmation_field" class="form-label">Konfirmasi Password</label>
+                <input type="password" name="password_confirmation" class="form-control" id="password_confirmation_field"
+                    required />
+                @error('password_confirmation')
+                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                @enderror
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-8 mb-3">Kirim</button>
+            <a href="{{ route('login') }}" class="btn btn-light-primary text-primary w-100 py-8">Kembali ke
+                Masuk</a>
+        </form>
+    </div>
+@endsection
