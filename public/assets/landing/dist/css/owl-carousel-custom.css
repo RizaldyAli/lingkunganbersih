@@ -1,0 +1,68 @@
+/* review */
+
+.review-section .review-slider .owl-carousel .owl-stage-outer {
+    padding-bottom: 20px;
+}
+
+.review-section .review-slider .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+    padding: 15px;
+}
+
+.review-section .review-slider .owl-carousel .owl-dots {
+    text-align: center;
+    bottom: -22px;
+    position: relative;
+}
+
+.review-section .review-slider .owl-carousel .owl-dots .owl-dot {
+    background-color: #000;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    opacity: 0.25;
+    margin: 0 5px;
+}
+
+.review-section .review-slider .owl-carousel .owl-dots .owl-dot.active {
+    opacity: 0.75;
+}
+
+.review-section .review-slider .owl-carousel .owl-dots .owl-dot:hover {
+    background-color: #000;
+    opacity: 0.75;
+}
+
+
+/* news */
+
+.news-section .news-slider .owl-carousel .owl-stage-outer {
+    padding-bottom: 20px;
+}
+
+.news-section .news-slider .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+    padding: 15px;
+}
+
+.news-section .news-slider .owl-carousel .owl-dots {
+    text-align: center;
+    bottom: -22px;
+    position: relative;
+}
+
+.news-section .news-slider .owl-carousel .owl-dots .owl-dot {
+    background-color: #000;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    opacity: 0.25;
+    margin: 0 5px;
+}
+
+.news-section .news-slider .owl-carousel .owl-dots .owl-dot.active {
+    opacity: 0.75;
+}
+
+.news-section .news-slider .owl-carousel .owl-dots .owl-dot:hover {
+    background-color: #000;
+    opacity: 0.75;
+}
