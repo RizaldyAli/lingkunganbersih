@@ -68,7 +68,7 @@
                                     <img src="{{ Storage::url($data->foto) }}" class="rounded" width="100" height="100"
                                         style="object-fit: cover; object-position: center;" alt="Foto">
                                 @else
-                                    <img src="{{ Storage::url('placeholder/placeholder.jpg') }}" class="rounded" width="100"
+                                    <img src="{{ Storage::url('placeholder/placeholder.png') }}" class="rounded" width="100"
                                         height="100" style="object-fit: cover; object-position: center;" alt="Foto">
                                 @endif
                                 <div class="d-flex flex-column justify-content-end text-end">

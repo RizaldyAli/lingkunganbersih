@@ -49,7 +49,7 @@
                                     style="width: 100%; height: 500px; object-fit: cover; object-position: center;"
                                     class="img-fluid rounded" alt="{{ $laporan->judul }}">
                             @else
-                                <img src="{{ Storage::url('placeholder/placeholder.jpg') }}"
+                                <img src="{{ Storage::url('placeholder/placeholder.png') }}"
                                     style="width: 100%; height: 500px; object-fit: cover; object-position: center;"
                                     class="img-fluid rounded" alt="{{ $laporan->judul }}">
                             @endif

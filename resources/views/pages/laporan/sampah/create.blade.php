@@ -43,7 +43,7 @@
                             <div class="mb-2">
                                 <h5 class="mb-0">Foto</h5>
                             </div>
-                            <img id="foto_preview" width="100%" height="500" src="{{ Storage::url('placeholder/placeholder.jpg') }}"
+                            <img id="foto_preview" width="100%" height="500" src="{{ Storage::url('placeholder/placeholder.png') }}"
                                 style="object-fit: cover; object-position: center;" class="rounded" alt="Preview">
                         </div>
                     </div>
