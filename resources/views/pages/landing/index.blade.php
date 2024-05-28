@@ -648,6 +648,7 @@
         </div>
     </section>
 
+    {{-- LAPOR SECTION --}}
     <section class="pt-8 pt-md-5 pb-5 pb-lg-10 pb-xl-12">
         <div class="container">
             <div class="row justify-content-center">
@@ -657,8 +658,15 @@
                             <h3 class="fs-7 fw-semibold pt-6">Ada masalah kebersihan?</h3>
                             <p class="mb-8 pb-2 text-dark">Laporkan sekarang! ✨</p>
                             <div class="d-sm-flex align-items-center justify-content-center gap-3 mb-4">
-                                <a href="https://adminmart.com/support" target="_blank"
-                                    class="btn btn-outline-secondary d-block" type="button">Lapor</a>
+                                {{-- <a href="https://adminmart.com/support" target="_blank"
+                                    class="btn btn-outline-secondary d-block" type="button">Lapor</a> --}}
+                                    @if (Auth::check())
+                                        <a class="btn btn-primary fs-3 rounded btn-hover-shadow px-3 py-2"
+                                            href="{{ route('dashboard') }}">Lapor</a>
+                                    @else
+                                        <a class="btn btn-primary fs-3 rounded btn-hover-shadow px-3 py-2"
+                                            href="{{ route('login') }}">Lapor</a>
+                                    @endif
                             </div>
                         </div>
                     </div>
