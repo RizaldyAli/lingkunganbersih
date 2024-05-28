@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/libs/aos/dist/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing/dist/css/owl-carousel-custom.css') }}">
+
     @stack('styles')
 </head>
 

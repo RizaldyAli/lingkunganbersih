@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
 
     // =================================
     // Tooltip
@@ -6,22 +6,22 @@ $(function () {
     var tooltipTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
     // scroll
 
-    $(".scroll-link").on("click", function (t) {
+    $(".scroll-link").on("click", function(t) {
         var o = $(this);
         $("html, body").stop().animate({
-           scrollTop: $(o.attr("href")).offset().top - 160
+            scrollTop: $(o.attr("href")).offset().top - 160
         }, 1e3), t.preventDefault()
-     })
+    })
 
     // fixed header
 
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         if ($(window).scrollTop() >= 60) {
             $('header').addClass('fixed-header');
         } else {
@@ -32,8 +32,8 @@ $(function () {
     // Aos
 
     AOS.init({
-		once: true,
-	});
+        once: true,
+    });
 
     // Production Slider
 
@@ -52,6 +52,28 @@ $(function () {
     // Review Slider
 
     $('.review-slider .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1200: {
+                items: 3
+            }
+        }
+    })
+
+    // News Slider
+
+    $('.news-slider .owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
         dots: true,
