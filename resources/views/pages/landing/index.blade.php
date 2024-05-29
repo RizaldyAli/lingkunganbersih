@@ -67,55 +67,6 @@
     </section>
 
 
-    {{-- LAPORAN --}}
-    <section class="production pb-10 pb-md-14" id="production-template">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                    <h2 class="text-center mb-0 fs-9 fw-bolder">Production Ready & Developer Friendly Bootstrap Admin
-                        Template</h2>
-                </div>
-            </div>
-            <div class="domo-contect position-relative">
-                <div class="demos-view mt-11 pt-lg-8">
-                    <div class="row justify-content-center">
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <div class="border d-block rounded-1 mb-2 position-relative lp-demos-box overflow-hidden">
-                                <img src="{{ asset('assets/landing/dist/images/demos/demo-main.jpg') }}" alt=""
-                                    class="img-fluid">
-                                <a target="_blank" href="../package/html/main/index.html"
-                                    class="btn btn-primary lp-demos-btn fs-3 px-7 py-1 rounded position-absolute top-50 start-50 translate-middle">Live
-                                    Preview</a>
-                            </div>
-                            <h6 class="mb-0 text-center fs-3">Main</h6>
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <div class="border d-block rounded-1 mb-2 position-relative lp-demos-box overflow-hidden">
-                                <img src="{{ asset('assets/landing/dist/images/demos/demo-dark.jpg') }}" alt=""
-                                    class="img-fluid">
-                                <a target="_blank" href="../package/html/dark/index.html"
-                                    class="btn btn-primary lp-demos-btn fs-3 px-7 py-1 rounded position-absolute top-50 start-50 translate-middle">Live
-                                    Preview</a>
-                            </div>
-                            <h6 class="mb-0 text-center fs-3">Dark</h6>
-                        </div>
-                        <div class="col-sm-6 col-lg-4 mb-8">
-                            <div class="border d-block rounded-1 mb-2 position-relative lp-demos-box overflow-hidden">
-                                <img src="{{ asset('assets/landing/dist/images/demos/demo-horizontal.jpg') }}" alt=""
-                                    class="img-fluid">
-                                <a target="_blank" href="../package/html/horizontal/index.html"
-                                    class="btn btn-primary lp-demos-btn fs-3 px-7 py-1 rounded position-absolute top-50 start-50 translate-middle">Live
-                                    Preview</a>
-                            </div>
-                            <h6 class="mb-0 text-center fs-3">Horizontal</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
     {{-- LAPORAN MASALAH --}}
     <section class="news-section pt-5 pt-lg-10 pt-xl-12 pb-8 pb-lg-9">
@@ -266,7 +217,7 @@
             </div>
         </div>
     </section>
-    
+
 
     
     {{-- FITUR --}}
