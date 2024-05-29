@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/landing/dist/images/logos/favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/libs/aos/dist/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/landing/dist/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing/dist/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/css/owl-carousel-custom.css') }}">
 
     @stack('styles')
