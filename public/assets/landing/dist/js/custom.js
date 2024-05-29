@@ -54,7 +54,7 @@ $(function() {
     $('.review-slider .owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
-        dots: true,
+        dots: false,
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
@@ -76,7 +76,7 @@ $(function() {
     $('.news-slider .owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
-        dots: true,
+        dots: false,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
