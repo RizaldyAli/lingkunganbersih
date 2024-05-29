@@ -9,6 +9,12 @@ class LandingController extends Controller
 {
     public function index()
     {
-        return view('pages.landing.index');
+        $data = Laporan::orderBy('created_at', 'asc')
+            ->where('status', 'DISETUJUI')
+            ->take(5)
+            ->get();
+
+        // dd($data);
+        return view('pages.landing.index', ['data' => $data]);
     }
 }
