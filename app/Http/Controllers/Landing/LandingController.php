@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Landing;
 
 use App\Http\Controllers\Controller;
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
