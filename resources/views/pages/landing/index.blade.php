@@ -10,45 +10,53 @@
             <div class="row align-items-center">
                 <div class="col-xl-6">
                     <div class="hero-content my-11 my-xl-0">
-                        <h6 class="d-flex align-items-center gap-2 fs-4 fw-semibold mb-3" data-aos="fade-up"
-                            data-aos-delay="200" data-aos-duration="1000"><i class="ti ti-rocket text-secondary fs-6"></i>Kick
-                            start your project with</h6>
                         <h1 class="fw-bolder mb-8 fs-13" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                            Most powerful & <span class="text-primary"> Developer friendly</span>
-                            dashboard</h1>
-                        <p class="fs-5 mb-5 text-dark fw-normal" data-aos="fade-up" data-aos-delay="600"
-                            data-aos-duration="1000">Modernize comes with light & dark color skins, well designed
-                            dashboards, applications and pages.</p>
+                            <span class="text-primary">Bersih</span> Bersama<span class="text-primary"> Nyaman</span> Selamanya
+                            </h1>
+                        <p class="fs-5 mb-5 text-dark fw-normal" data-aos="fade-up" data-aos-delay="600"data-aos-duration="1000">
+                            Laporkan masalah kebersihan disekitarmu!
+                        </p>
                         <div class="d-sm-flex align-items-center gap-3" data-aos="fade-up" data-aos-delay="800"
                             data-aos-duration="1000">
-                            <a class="btn btn-primary px-5 btn-hover-shadow d-block mb-3 mb-sm-0"
-                                href="../package/html/main/authentication-login.html">Login</a>
-                            <a class="btn btn-outline-primary d-block scroll-link" href="#production-template">Live
-                                Preview</a>
+                  
+                                {{-- <a href="https://adminmart.com/support" target="_blank"
+                                    class="btn btn-outline-secondary d-block" type="button">Lapor</a> --}}
+                                    @if (Auth::check())
+                                        <a class="btn btn-primary fs-3 rounded btn-hover-shadow px-3 py-2"
+                                            href="{{ route('dashboard') }}">Lapor</a>
+                                    @else
+                                        <a class="btn btn-primary fs-3 rounded btn-hover-shadow px-3 py-2"
+                                            href="{{ route('login') }}">Lapor</a>
+                                    @endif
+
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 d-none d-xl-block">
                     <div class="hero-img-slide position-relative bg-light-primary p-4 rounded">
                         <div class="d-flex flex-row">
-                            <div class="">
+                            <div class="" style="margin-right: 3%">
                                 <div class="banner-img-1 slideup">
-                                    <img src="{{ asset('assets/landing/dist/images/hero-img/bannerimg1.svg') }}" alt=""
-                                        class="img-fluid">
+                                    <div class="img-fluid" style="max-width: 403px; height: 100%;">
+                                        <img style="width: 100%; height: 95%; object-fit: cover;" src="{{ asset('assets/landing/dist/images/hero-img/bersih-1.jpg') }}" alt="">
+                                    </div>
                                 </div>
                                 <div class="banner-img-1 slideup">
-                                    <img src="{{ asset('assets/landing/dist/images/hero-img/bannerimg1.svg') }}" alt=""
-                                        class="img-fluid">
+                                    <div class="img-fluid" style="max-width: 403px; height: 100%;">
+                                        <img style="width: 100%; height: 95%; object-fit: cover;" src="{{ asset('assets/landing/dist/images/hero-img/kerja-bakti-1.jpg') }}" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="">
                                 <div class="banner-img-2 slideDown">
-                                    <img src="{{ asset('assets/landing/dist/images/hero-img/bannerimg2.svg') }}" alt=""
-                                        class="img-fluid">
+                                    <div class="img-fluid" style="max-width: 403px; height: 100%;">
+                                        <img style="width: 100%; height: 95%; object-fit: cover;" src="{{ asset('assets/landing/dist/images/hero-img/bersih-2.jpg') }}" alt="">
+                                    </div>
                                 </div>
                                 <div class="banner-img-2 slideDown">
-                                    <img src="{{ asset('assets/landing/dist/images/hero-img/bannerimg2.svg') }}" alt=""
-                                        class="img-fluid">
+                                    <div class="img-fluid" style="max-width: 403px; height: 100%;">
+                                        <img style="width: 100%; height: 95%; object-fit: cover;" src="{{ asset('assets/landing/dist/images/hero-img/bersih-2.jpg') }}" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,6 +65,7 @@
             </div>
         </div>
     </section>
+
 
     {{-- LAPORAN --}}
     <section class="production pb-10 pb-md-14" id="production-template">
