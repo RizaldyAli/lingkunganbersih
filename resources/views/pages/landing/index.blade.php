@@ -679,8 +679,7 @@
         <div class="container">
             <div class="row justify-content-between" style="display: flex; flex-direction: column; align-items: center;">
                 <div class="col-lg-7 col-xl-5 pt-lg-5 mb-5 mb-lg-0">
-                    <h2 class="fs-12 text-white text-center fw-bolder mb-8">Build your app with our highly
-                        customizable Bootstrap based Dashboard</h2>
+                    <h2 class="fs-12 text-white text-center fw-bolder mb-8">Mari, sama-sama menjaga kebersihan dengan melapor masalah kebersihan disekitarmu.</h2>
                 </div>
                 <div class="col-lg-5 col-xl-5">
                     <div class="text-center">
@@ -690,6 +689,7 @@
             </div>
         </div>
     </section>
+
 @endsection
 @push('scripts')
 
