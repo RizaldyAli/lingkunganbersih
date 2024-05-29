@@ -608,15 +608,15 @@
         </div>
     </section>
 
+    
     {{-- FITUR --}}
     <section class="features-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-                        <small class="text-primary fw-bold mb-2 d-block fs-3">ALMOST COVERED EVERYTHING</small>
-                        <h2 class="fs-9 text-center mb-4 mb-lg-9 fw-bolder">Other Amazing Features & Flexibility Provided
-                        </h2>
+                        {{-- <small class="text-primary fw-bold mb-2 d-block fs-3">ALMOST COVERED EVERYTHING</small> --}}
+                        <h2 class="fs-9 text-center mb-4 mb-lg-9 fw-bolder">Fitur <span class="text-primary"> Unggulan</span></h2>
                     </div>
                 </div>
             </div>
@@ -625,37 +625,38 @@
                     data-aos-duration="1000">
                     <div class="text-center mb-5">
                         <i class="d-block ti ti-wand text-primary fs-10"></i>
-                        <h5 class="fs-5 fw-semibold mt-8">6 Theme Colors</h5>
-                        <p class="mb-0 text-dark">We have included 6 pre-defined Theme Colors with Elegant Admin.</p>
+                        <h5 class="fs-5 fw-semibold mt-8">Upload Foto</h5>
+                        <p class="mb-0 text-dark">Foto masalah kebersihan yang sedang terjadi di lokasimu.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="800"
                     data-aos-duration="1000">
                     <div class="text-center mb-5">
                         <i class="d-block ti ti-layout-sidebar text-primary fs-10"></i>
-                        <h5 class="fs-5 fw-semibold mt-8">Dark & Light Sidebar</h5>
-                        <p class="mb-0 text-dark">Included Dark and Light Sidebar for getting desire look and feel.</p>
+                        <h5 class="fs-5 fw-semibold mt-8">Tandai Tempat</h5>
+                        <p class="mb-0 text-dark">Tentukan lokasi melalui live maps.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="800"
                     data-aos-duration="1000">
                     <div class="text-center mb-5">
                         <i class="d-block ti ti-archive text-primary fs-10"></i>
-                        <h5 class="fs-5 fw-semibold mt-8">425+ Page Templates</h5>
-                        <p class="mb-0 text-dark">Yes, we have 5 demos & 79+ Pages per demo to make it easier.</p>
+                        <h5 class="fs-5 fw-semibold mt-8">Rinci</h5>
+                        <p class="mb-0 text-dark">Deskripsikan masalah kebersihan secara rinci.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="800"
                     data-aos-duration="1000">
                     <div class="text-center mb-5">
                         <i class="d-block ti ti-adjustments text-primary fs-10"></i>
-                        <h5 class="fs-5 fw-semibold mt-8">150+ UI Components</h5>
-                        <p class="mb-0 text-dark">Almost 150+ UI Components being given with Modernize Admin Pack.</p>
+                        <h5 class="fs-5 fw-semibold mt-8">Informatif</h5>
+                        <p class="mb-0 text-dark">Dapatkan informasi laporanmu secara transparan.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     {{-- LAPOR SECTION --}}
     <section class="pt-8 pt-md-5 pb-5 pb-lg-10 pb-xl-12">
