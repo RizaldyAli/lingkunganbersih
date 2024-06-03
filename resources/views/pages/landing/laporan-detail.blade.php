@@ -7,15 +7,14 @@
     @foreach ($data as $d)
     @endforeach
 
-
-    <section>
+    <section class="container">
         <div class="row">
     
             <div class="col-12">
-                <div class="card">
+                <div class="card" style="margin: 3% 0">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a role="button" href="{{ route('sampah.index') }}"
+                            <a role="button" href="{{ route('laporan-lengkap') }}"
                                 class="btn btn-light-primary btn-circle btn-xl d-inline-flex align-items-center justify-content-center">
                                 <i class="fs-7 ti ti-arrow-left text-primary"></i>
                             </a>
@@ -24,8 +23,7 @@
                                     <h5 class="mb-0">{{ $d->judul }}</h5>
                                 </div>
                                 <p class="card-subtitle text-end">
-                                    Menampilkan detail {{ $d->judul }} yang terlaporkan di
-                                    <code>lingkunganbersih.id</code>
+                                    Detail laporan {{ $d->judul }}
                                 </p>
                             </div>
                         </div>
@@ -36,7 +34,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="card">
+                        <div class="card" style="margin: 3% 0">
                             <div class="card-body">
                                 <div class="mb-2">
                                     <h5 class="mb-0">Foto</h5>
@@ -52,7 +50,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" style="margin: 3% 0">
                             <div class="card-body">
                                 <div class="mb-2">
                                     <h5 class="mb-0">Lokasi</h5>
@@ -65,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card" style="margin: 3% 0">
                             <div class="card-body">
                                 <div class="mb-2">
                                     <h5 class="mb-0">Informasi</h5>
@@ -96,7 +94,7 @@
                                 </dl>
                             </div>
                         </div>
-
+    
                     </div>
                 </div>
             </div>
