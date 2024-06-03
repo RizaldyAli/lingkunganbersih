@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/dashboard/dist/images/logos/favicon.ico') }}" />
     <link rel="stylesheet"
         href="{{ asset('assets/dashboard/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
-    <link id="themeColors" rel="stylesheet" href="{{ asset('assets/dashboard/dist/css/style.min.css') }}" />
+    <link id="themeColors" rel="stylesheet" href="{{ asset('assets/dashboard/dist/css/style.css') }}" />
     @stack('styles')
 </head>
 
