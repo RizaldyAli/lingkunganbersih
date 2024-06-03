@@ -81,18 +81,31 @@
                 <div class="owl-carousel owl-theme">
                     @foreach ($data as $d)
                     <div class="item">
-                        <div class="card">
-                            <img class="card-img-top" src="{{ Storage::url($d->foto) }}" alt="Card image" style="width:100%">
-                            <div class="card-body">
-                              <h4 class="card-title">{{ $d->judul }}</h4>
-                              <p class="card-text">{{ $d->created_at }}</p>
-                              <a href="#" class="btn btn-primary">Selengkapnya</a>
+                        <a href="#">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ Storage::url($d->foto) }}" alt="Card image" style="width:100%">
+                                <a href="#" class="btn btn-primary" style="position: absolute; top: 8px; right: 8px;">Disetujui</a>
+                                <div class="card-body">
+                                  <h4 class="card-title">{{ $d->judul }}</h4>
+                                  <p class="card-text">{{ $d->created_at }}</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     @endforeach
                 </div>
             </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <a href="#">
+                        <h2 class="fs-3 text-center mb-4 mb-lg-5 fw-bolder" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                            <span style="color: black">Lihat Laporan Selengkapnya</span>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
