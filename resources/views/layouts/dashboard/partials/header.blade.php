@@ -6,18 +6,14 @@
             </a>
         </li>
         <li class="nav-item d-none d-xl-block">
-            <a href="{{ route('landing') }}" class="text-nowrap nav-link">
-                <img src="{{ asset('assets/dashboard/dist/images/logos/dark-logo.svg') }}" class="dark-logo"
-                    width="180" alt="" />
-                <img src="{{ asset('assets/dashboard/dist/images/logos/light-logo.svg') }}" class="light-logo"
-                    width="180" alt="" />
+            <a class="navbar-brand me-0 py-0" href="{{ route('landing') }}">
+                <h2 style="font-family: var(--bs-font-sans-serif) ;color: #50bb27; -webkit-text-stroke:1px #bef0a6;">Lingkungan Bersih</h2>
             </a>
         </li>
     </ul>
     <div class="d-block d-xl-none">
-        <a href="index.html" class="text-nowrap nav-link">
-            <img src="{{ asset('assets/dashboard/dist/images/logos/dark-logo.svg') }}" width="180"
-                alt="" />
+        <a class="navbar-brand me-0 py-0" href="{{ route('landing') }}">
+            <h2 style="font-family: var(--bs-font-sans-serif) ;color: #50bb27; -webkit-text-stroke:1px #bef0a6;">Lingkungan Bersih</h2>
         </a>
     </div>
     <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

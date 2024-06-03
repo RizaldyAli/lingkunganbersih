@@ -69,7 +69,7 @@
 
 
     {{-- LAPORAN MASALAH --}}
-    <section class="news-section pt-5 pt-lg-10 pt-xl-12 pb-8 pb-lg-9">
+    <section id="laporan" class="news-section pt-5 pt-lg-10 pt-xl-12 pb-8 pb-lg-9">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -99,7 +99,7 @@
 
 
     {{-- FEEDBACK PELAPOR KE ADMIN --}}
-    <section class="review-section pt-5 pt-lg-10 pt-xl-12 pb-8 pb-lg-9">
+    <section id="feedback" class="review-section pt-5 pt-lg-10 pt-xl-12 pb-8 pb-lg-9">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -221,7 +221,7 @@
 
     
     {{-- FITUR --}}
-    <section class="features-section py-5">
+    <section id="fitur" class="features-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
