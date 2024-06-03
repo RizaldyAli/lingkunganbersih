@@ -18,6 +18,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center mb-2 mb-lg-0 ms-auto">
                 <li>
+                    <a class="nav-link nav-item" href="{{ route('landing') }}" style="color: #50bb27;">Home</a>
+                </li>
+                <li>
                     <a class="nav-link nav-item" href="#laporan" style="color: #50bb27;">Laporan</a>
                 </li>
                 <li>
