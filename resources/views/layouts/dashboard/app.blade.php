@@ -20,8 +20,7 @@
 
 <body>
     <div class="preloader">
-        <img src="{{ asset('assets/dashboard/dist/images/logos/favicon.ico') }}" alt="loader"
-            class="lds-ripple img-fluid" />
+        <h2 class="lds-ripple img-fluid" style="font-family: var(--bs-font-sans-serif) ;color: #50bb27; -webkit-text-stroke:1px #bef0a6;">Lingkungan Bersih</h2>
     </div>
     <div class="page-wrapper" id="main-wrapper" data-layout="horizontal" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
