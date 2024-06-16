@@ -10,10 +10,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-2">
-                            <h5 class="mb-0">Akun Masyarakat</h5>
+                            <h2 class="fw-bolder mb-0">Akun {{ ucwords(request()->segment(1)) }}</h2>
                         </div>
                         <p class="card-subtitle mb-3">
-                            Menampilkan semua akun masyarakat yang terdaftar di <code>lingkunganbersih.id</code>
+                            Menampilkan semua akun <span class="fw-bolder">{{ ucwords(request()->segment(1)) }}</span> yang ada di <code>lingkunganbersih.id</code>
                         </p>
                         <div class="table-responsive">
                             {{ $dataTable->table() }}

@@ -11,10 +11,13 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="mb-2">
-                                <h5 class="mb-0">Laporan Sampah</h5>
+                                <h2 class="fw-bolder mb-0">Laporan {{ ucwords(str_replace('-', ' ', request()->segment(2))) }}
+                                </h2>
                             </div>
                             <p class="card-subtitle mb-3">
-                                Menampilkan semua laporan sampah yang terlaporkan di <code>lingkunganbersih.id</code>
+                                Menampilkan semua laporan <span
+                                    class="fw-bolder">{{ ucwords(str_replace('-', ' ', request()->segment(2))) }}</span> yang
+                                ada di <code>lingkunganbersih.id</code>
                             </p>
                             <div class="table-responsive">
                                 {{ $dataTable->table() }}
@@ -45,13 +48,16 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex flex-column">
                                 <div class="mb-2">
-                                    <h5 class="mb-0">Laporan Sampah</h5>
+                                    <h2 class="fw-bolder mb-0">Laporan
+                                        {{ ucwords(str_replace('-', ' ', request()->segment(2))) }}</h2>
                                 </div>
-                                <p class="card-subtitle">
-                                    Menampilkan semua laporan sampah yang kamu laporkan di <code>lingkunganbersih.id</code>
+                                <p class="card-subtitle mb-3">
+                                    Menampilkan semua laporan <span
+                                        class="fw-bolder">{{ ucwords(str_replace('-', ' ', request()->segment(2))) }}</span>
+                                    yang ada di <code>lingkunganbersih.id</code>
                                 </p>
                             </div>
-                            <a role="button" href="{{ route('sampah.create') }}"
+                            <a role="button" href="{{ route('laporan.create', ['kategori' => request()->segment(2)]) }}"
                                 class="btn btn-light-primary btn-circle btn-xl d-inline-flex align-items-center justify-content-center">
                                 <i class="fs-7 ti ti-plus text-primary"></i>
                             </a>
@@ -61,9 +67,9 @@
             </div>
             @foreach ($datas as $data)
                 <div class="col-md-6">
-                    <div class="card" data-show data-id="{{ $data->id }}">
+                    <div class="card" data-show data-id="{{ $data->id }}" data-kategori="{{ request()->segment(2) }}">
                         <div class="card-body">
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between gap-4">
                                 @if (Storage::disk('public')->exists($data->foto))
                                     <img src="{{ Storage::url($data->foto) }}" class="rounded" width="100" height="100"
                                         style="object-fit: cover; object-position: center;" alt="Foto">
@@ -71,23 +77,15 @@
                                     <img src="{{ Storage::url('placeholder/placeholder.png') }}" class="rounded" width="100"
                                         height="100" style="object-fit: cover; object-position: center;" alt="Foto">
                                 @endif
-                                <div class="d-flex flex-column justify-content-end text-end">
-                                    <div class="mb-2">
-                                        <h2 class="card-subtitle mb-0">{{ $data->judul }}</h2>
-                                    </div>
-                                    <div class="mb-2">
-                                        <small class="mb-0">{{ $data->created_at->locale('id')->diffForHumans() }}</small>
-                                    </div>
-                                    <div class="mb-2">
-                                        <p class="mb-0">{{ $data->status }}</p>
-                                    </div>
-                                    <div class="mb-0">
-                                        @if ($data->is_read == '0')
-                                            <span class="text-muted"><i class="ti ti-checks"></i></span>
-                                        @else
-                                            <span class="text-primary"><i class="ti ti-checks"></i></span>
-                                        @endif
-                                    </div>
+                                <div class="d-flex flex-column w-100">
+                                    <h2 class="fw-bolder">{{ $data->judul }}</h2>
+                                    <small class="mb-0">{{ $data->created_at->locale('id')->diffForHumans() }}</small>
+                                    <p class="mb-0">{{ $data->status }}</p>
+                                    @if ($data->is_read == '0')
+                                        <span class="text-muted"><i class="ti ti-checks"></i></span>
+                                    @else
+                                        <span class="text-primary"><i class="ti ti-checks"></i></span>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -106,7 +104,7 @@
     @can('masyarakat-view')
         <script>
             $(document).on('click', 'div[data-show]', function() {
-                window.location.href = '{{ route('sampah.show', 'id') }}'.replace('id', $(this).data('id'));
+                window.location.href = '/laporan/' + $(this).data('kategori') + '/' + $(this).data('id');
             });
             $(document).on('mouseenter', 'div[data-show]', function() {
                 $(this).css('cursor', 'pointer');

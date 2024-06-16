@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('deskripsi', 100);
             $table->text('foto');
             $table->enum('status', ['DIKIRIM', 'DISETUJUI', 'DITOLAK'])->default('DIKIRIM');
+            $table->enum('kategori', ['SAMPAH', 'GOT_TERSUMBAT', 'JALAN_RUSAK'])->default('SAMPAH');
             $table->string('keterangan', 100)->nullable();
             $table->enum('is_read', ['0', '1'])->comment('0 = Belum dilihat, 1 = Sudah dilihat');
             $table->foreignId('user_id')->constrained('users');

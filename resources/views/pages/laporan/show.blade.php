@@ -1,6 +1,14 @@
 @extends('layouts.dashboard.app')
+
 @push('styles')
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #mapid {
+            height: 500px;
+        }
+    </style>
 @endpush
+
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -19,16 +27,16 @@
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <a role="button" href="{{ route('sampah.index') }}"
+                        <a role="button" href="{{ route('laporan.index', ['kategori' => request()->segment(2)]) }}"
                             class="btn btn-light-primary btn-circle btn-xl d-inline-flex align-items-center justify-content-center">
                             <i class="fs-7 ti ti-arrow-left text-primary"></i>
                         </a>
                         <div class="d-flex align-items-end flex-column">
                             <div class="mb-2">
-                                <h5 class="mb-0">{{ $laporan->judul }}</h5>
+                                <h2 class="fw-bolder mb-0">{{ $laporan->judul }}</h2>
                             </div>
                             <p class="card-subtitle text-end">
-                                Menampilkan detail {{ $laporan->judul }} yang terlaporkan di
+                                Menampilkan detail <span class="fw-bolder">{{ $laporan->judul }}</span> yang ada di
                                 <code>lingkunganbersih.id</code>
                             </p>
                         </div>
@@ -49,9 +57,10 @@
                                     style="width: 100%; height: 500px; object-fit: cover; object-position: center;"
                                     class="img-fluid rounded" alt="{{ $laporan->judul }}">
                             @else
-                                <img src="{{ Storage::url('placeholder/placeholder.png') }}"
-                                    style="width: 100%; height: 500px; object-fit: cover; object-position: center;"
-                                    class="img-fluid rounded" alt="{{ $laporan->judul }}">
+                                <img id="foto_preview" width="100%" height="500"
+                                    src="{{ asset('assets/dashboard/dist/images/placeholder/placeholder.jpg') }}"
+                                    style="object-fit: cover; object-position: center;" class="rounded"
+                                    alt="{{ $laporan->judul }}">
                             @endif
                         </div>
                     </div>
@@ -60,10 +69,7 @@
                             <div class="mb-2">
                                 <h5 class="mb-0">Lokasi</h5>
                             </div>
-                            <iframe class="rounded" width="100%" height="500" frameborder="0" scrolling="no"
-                                marginheight="0" marginwidth="0"
-                                src="https://maps.google.com/maps?q={{ $laporan->lokasi->latitude }},{{ $laporan->lokasi->longitude }}&hl=id&z=14&amp;output=embed">
-                            </iframe>
+                            <div id="mapid" class="rounded" style="height: 500px;"></div>
                         </div>
                     </div>
                 </div>
@@ -86,6 +92,11 @@
                                 <dd class="col-sm-8">
                                     {{ $laporan->user->name }}
                                 </dd>
+                                <dt class="col-sm-4 text-muted">Kategori</dt>
+                                <dd class="col-sm-8">
+                                    {{ ucwords(str_replace('-', ' ', request()->segment(2))) }}
+                                </dd>
+                                </dd>
                                 @can('masyarakat-read')
                                     <dt class="col-sm-4 text-muted">Status</dt>
                                     <dd class="col-sm-8">
@@ -105,7 +116,9 @@
                                 <div class="mb-2">
                                     <h5 class="mb-0">Tindakan</h5>
                                 </div>
-                                <form action="{{ route('sampah.update', $laporan->id) }}" method="POST">
+                                <form
+                                    action="{{ route('laporan.update', ['kategori' => request()->segment(2), 'laporan' => $laporan->id]) }}"
+                                    method="POST">
                                     @csrf
                                     @method('PUT')
                                     <select class="form-select mb-2" name="status">
@@ -131,10 +144,27 @@
         </div>
     </div>
 @endsection
+
 @push('scripts')
-    @can('admin-update')
-        <script>
-            $(document).ready(function() {
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        $(document).ready(function() {
+            var map = L.map('mapid').setView([{{ $laporan->lokasi->latitude }},
+                {{ $laporan->lokasi->longitude }}
+            ], 14);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var marker = L.marker([{{ $laporan->lokasi->latitude }}, {{ $laporan->lokasi->longitude }}]).addTo(
+                map);
+
+            var popup = L.popup()
+                .setContent("<b>{{ $laporan->judul }}</b><br>{{ $laporan->deskripsi }}");
+
+            marker.bindPopup(popup);
+
+            @can('admin-update')
                 const statusValue = "{{ $laporan->status }}";
                 const keteranganValue = "{{ $laporan->keterangan }}";
                 if (statusValue === 'DIKIRIM') {
@@ -152,7 +182,7 @@
                         keteranganValue + '</textarea>');
                     $('textarea[name="keterangan"]').prop('disabled', true);
                 }
-            });
-        </script>
-    @endcan
+            @endcan
+        });
+    </script>
 @endpush

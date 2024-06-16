@@ -41,9 +41,21 @@
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
-                            <a href="{{ route('sampah.index') }}" class="sidebar-link">
+                            <a href="{{ route('laporan.index', ['kategori' => 'sampah']) }}" class="sidebar-link">
                                 <i class="ti ti-trash"></i>
                                 <span class="hide-menu">Sampah</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('laporan.index', ['kategori' => 'got-tersumbat']) }}" class="sidebar-link">
+                                <i class="ti ti-ripple-off"></i>
+                                <span class="hide-menu">Got Tersumbat</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('laporan.index', ['kategori' => 'jalan-rusak']) }}" class="sidebar-link">
+                                <i class="ti ti-road"></i>
+                                <span class="hide-menu">Jalan Rusak</span>
                             </a>
                         </li>
                     </ul>
@@ -60,9 +72,21 @@
                         </a>
                         <ul aria-expanded="false" class="collapse first-level">
                             <li class="sidebar-item">
-                                <a href="{{ route('sampah.index') }}" class="sidebar-link">
+                                <a href="{{ route('laporan.index', ['kategori' => 'sampah']) }}" class="sidebar-link">
                                     <i class="ti ti-trash"></i>
                                     <span class="hide-menu">Sampah</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('laporan.index', ['kategori' => 'got-tersumbat']) }}" class="sidebar-link">
+                                    <i class="ti ti-ripple-off"></i>
+                                    <span class="hide-menu">Got Tersumbat</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="{{ route('laporan.index', ['kategori' => 'jalan-rusak']) }}" class="sidebar-link">
+                                    <i class="ti ti-road"></i>
+                                    <span class="hide-menu">Jalan Rusak</span>
                                 </a>
                             </li>
                         </ul>

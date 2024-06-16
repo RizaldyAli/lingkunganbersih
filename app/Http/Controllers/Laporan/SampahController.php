@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class SampahController extends Controller
 {
-    public function index()
+    public function index(Laporan $kategori)
     {
         if (auth()->user()->can('admin-view')) {
             $dataTable = new SampahDataTable();
