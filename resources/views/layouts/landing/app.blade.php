@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="dicoding:email" content="alirizaldy357@gmail.com">
     <title>{{ config('app.name') }}</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/landing/dist/images/logos/favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('assets/landing/dist/libs/aos/dist/aos.css') }}">

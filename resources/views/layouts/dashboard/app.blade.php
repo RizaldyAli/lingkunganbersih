@@ -11,6 +11,7 @@
     <meta name="author" content="" />
     <meta name="keywords" content="Mordenize" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="dicoding:email" content="alirizaldy357@gmail.com">
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/dashboard/dist/images/logos/favicon.ico') }}" />
     <link rel="stylesheet"
         href="{{ asset('assets/dashboard/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
